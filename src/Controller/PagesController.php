@@ -131,8 +131,7 @@ $mailsy['subject']=''.addslashes($str['subject']).'';
 $mailsy['firstname']=''.$str['firstname'].'';
 $mailsy['created_at']=''.DATE('Y-m-d H:i:s', strtotime(''.$str['created_at'].'')).'';
 $mailsy['created']=time();
-$mailsy['body']=''.addslashes($str['body']).'';
-$mailsy['active']=1;
+ $mailsy['active']=1;
 array_push($mails, $mailsy);
    }
     	  	$addFeed = $this->mailsTable->newEntities($mails);
