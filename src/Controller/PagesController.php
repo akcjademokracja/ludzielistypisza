@@ -82,7 +82,7 @@ $this->set('ilemails', $ilemails);
             'Mails.mail_id' => 'desc'
         ]
     ];
- 		$k=$mails->all()->toArray();
+ 	if (count($mails)>0) { 	$k=$mails->all()->toArray(); }
  		if ($_GET['mails']) { $mails->limit($_GET['mails']); }
       if ($_GET['elements']=='all') { $_SESSION['limit']=''; } else if ($_GET['elements']) { $_SESSION['limit']=$_GET['elements']; };
 		if ($_SESSION['limit']) { 
