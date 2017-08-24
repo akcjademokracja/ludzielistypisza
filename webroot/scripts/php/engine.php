@@ -28,4 +28,24 @@ function _no_pl($tekst)
 
    return strtr($tekst,$tabela);
 }
+
+
+ 
+  function txtToJson($tekst) { 
+   $tekst=trim($tekst); 
+
+ $tekst=htmlspecialchars($tekst); 
+	$tekst = nl2br($tekst);
+ $tekst = str_replace(chr(10), "", $tekst);
+ $tekst = str_replace(chr(13), "", $tekst);
+
+ 	$tekst=str_replace(array('<br />'), '', $tekst);
+$tekst=str_replace(array("<br/>", '\/','\\', '\'','`', '\\r', '\\n', "\\\\", "<", "!", ":", ")", "("), ' ', $tekst);
+$tekst=str_replace(array('"'), '\"', $tekst);
+    $tekst=trim($tekst); 
+
+return $tekst;
+};
+
+
 ?>

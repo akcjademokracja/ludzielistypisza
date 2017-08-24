@@ -108,7 +108,7 @@ $lastMail->toArray();
 
 }
  if (time()-strtotime(''.$lastMail['created'].'')>900) { 
- 	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?'.$_SERVER['SPEAKOUT_MAILS_ACTION'].'='.$lastMail['mail_id'].'';
+ 	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?id_newer='.$lastMail['mail_id'].'';
  
 echo $url;
  $process = curl_init($url);
@@ -122,18 +122,17 @@ $return = curl_exec($process);
 curl_close($process);
 $streamsy=json_decode($return, true);
 $streamsy   = array_reverse($streamsy);
-print_r($streamsy);
- if (count($streamsy)>0) {  
+  if (count($streamsy)>0) {  
 	 $this->mailsTable = TableRegistry::get('Mails');
   $mails=array();
   	  foreach ($streamsy as $str) { 
 	  	  $mailsy=array();
 $mailsy['mail_id']=''.$str['id'].'';
-$mailsy['subject']=''.$str['subject'].'';
+$mailsy['subject']=''.txtToJson($str['subject']).'';
 $mailsy['firstname']=''.$str['firstname'].'';
 $mailsy['created_at']=''.DATE('Y-m-d H:i:s', strtotime(''.$str['created_at'].'')).'';
 $mailsy['created']=time();
-$mailsy['body']=''.addslashes(htmlspecialchars($str['body'])).'';
+$mailsy['body']=''.txtToJson($str['body']).'';
 $mailsy['active']=0;
 array_push($mails, $mailsy);
    }
