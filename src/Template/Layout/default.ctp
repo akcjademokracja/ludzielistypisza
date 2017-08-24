@@ -25,9 +25,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
  A Ty, jakich sądów chcesz? Kliknij w link, aby przejść na stronę i wysłać wiadomość do Andrzeja Dudy!<? }; ?>" />
 <meta name="keywords" content="strony www, projektowanie www, witryny internetowe, twórcy stron internetowych" />
 <meta property="og:image" content="https://www.lancuchswiatla.pl/reforma.png" />
-<meta property="og:url" content="https://www.lancuchswiatla.pl" />
+<meta property="og:url" content="https://www.lancuchswiatla.pl<?=$_SERVER['REQUEST_URI']?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="<? if ($wpis) { echo $wpis['subject'].' - Piszemy do Prezydenta Andrzeja Dudy w obronie niezależności sądów'; } else { ?>Piszemy do Prezydenta Andrzeja Dudy w obronie niezależności sądów <? }; ?>" />
+<meta property="og:title" content="<? if ($wpis) { echo $wpis['subject'].''; } else { ?>Piszemy do Prezydenta Andrzeja Dudy w obronie niezależności sądów <? }; ?>" />
 <meta property="og:description" content="<? if ($wpis) { ?> <?=$wpis['firstname']?> pisze do prezydenta Andrzeja Dudy: <?=addslashes($wpis['body'])?><? } else { $ilesend=$ilemails/100*100; ?>Już ponad <?=$ilesend?> osób wysłało e-maila do Prezydenta ze swoją wizją reformy sądownictwa! Tu możesz je przeczytać.
  A Ty, jakich sądów chcesz? Kliknij w link, aby przejść na stronę i wysłać wiadomość do Andrzeja Dudy!<? }; ?>" />
 <meta property="og:locale" content="pl_PL" />
