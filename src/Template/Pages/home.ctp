@@ -301,7 +301,7 @@ js.src = "http://connect.facebook.net/pl_PL/all.js";
 	 <h5 class="text-300 line-height-30"><?=$wpis['body']?></h5>
 	 		<h6 class="text-muted"><?=$wpis['firstname']?> - <?=DATE('d.m.Y H:i', strtotime(''.$wpis['created_at'].''))?></h6>
 <br/>
-	 <div class="fb-like" data-href="http://akcjapad.nowosz.com/<?=$wpis['id']?>-<?=linkTitle($wpis['subject'])?>-<?=linkTitle($wpis['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+	 <div class="fb-like" data-href="https://lancuchswiatla.pl/<?=$wpis['id']?>-<?=linkTitle($wpis['subject'])?>-<?=linkTitle($wpis['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 	 
  </div>
  <h1 style="margin-top: 100px; color:#fff; text-align:center">POZOSTAŁE LISTY</h1>
@@ -321,7 +321,7 @@ js.src = "http://connect.facebook.net/pl_PL/all.js";
 		<h4><?=$stream['subject']?></h4>
 		<h6 class="text-muted"><?=$stream['firstname']?> <? if ($stream['miejscowosc']) { echo '- '.$stream['miejscowosc'].''; }; ?> - <?=DATE('d.m.Y H:i', strtotime(''.$stream['created_at'].''))?></h6>
 		<h5 class="text-300"><?=$stream['body']?></h5>
-		<div class="fb-like" data-href="http://akcjapad.nowosz.com/<?=$stream['id']?>-<?=linkTitle($stream['subject'])?>-<?=linkTitle($stream['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+		<div class="fb-like" data-href="https://lancuchswiatla.pl/<?=$stream['id']?>-<?=linkTitle($stream['subject'])?>-<?=linkTitle($stream['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 		
 	</div>
 	
