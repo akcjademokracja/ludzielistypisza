@@ -64,7 +64,7 @@ class AppController extends Controller
      * @return \Cake\Network\Response|null|void
      */
     public function beforeFilter(Event $event)
-    {     parent::beforeFilter();
+    {      
 	    $this->Auth->allow();
  		$user = $this->Auth->user();
  
