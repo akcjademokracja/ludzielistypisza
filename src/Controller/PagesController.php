@@ -107,7 +107,7 @@ $lastMail->toArray();
 
 
 }
- if (time()-strtotime(''.$lastMail['created'].'')>900) { 
+ if (time()-strtotime(''.$lastMail['created'].'')>900 or 1==1) { 
  	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?id_newer='.$lastMail['mail_id'].'';
  
 echo $url;
