@@ -299,7 +299,7 @@ js.src = "http://connect.facebook.net/pl_PL/all.js";
  <div class="container-fluid" style="padding:20px; background:#efefef; margin-top:50px" style="margin: 0px 30px">
 	 <h3><?=$wpis['subject']?></h3>
 	 <h5 class="text-300 line-height-30"><?=$wpis['body']?></h5>
-	 		<h6 class="text-muted"><?=$wpis['firstname']?> - <?=DATE('d.m.Y H:i', strtotime(''.$wpis['created_at'].''))?></h6>
+	 		<h6 class="text-muted"><?=$wpis['firstname']?><? if ($wpis['miejscowosc']) { ?> - <?= $wpis['miejscowosc'] ?><? } ?></h6>
 <br/>
 	 <div class="fb-like" data-href="http://akcjapad.nowosz.com/<?=$wpis['id']?>-<?=linkTitle($wpis['subject'])?>-<?=linkTitle($wpis['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 	 

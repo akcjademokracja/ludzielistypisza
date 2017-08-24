@@ -108,7 +108,7 @@ $lastMail->toArray();
 
 }
  if (time()-strtotime(''.$lastMail['created'].'')>900) { 
- 	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?id_newer='.$lastMail['mail_id'].'';
+ 	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?id_newer='.$lastMail['mail_id'].'&area_type=miejscowosc';
  
   $process = curl_init($url);
  curl_setopt($process, CURLOPT_USERPWD, "".$_SERVER['SPEAKOUT_USERNAME'].":".$_SERVER['SPEAKOUT_PASSWORD']."");
