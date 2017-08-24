@@ -143,6 +143,42 @@ array_push($mails, $mailsy);
 
  
 
+ $mails=$this->Mails->find()->where(''.$where.'')->order(''.$order.'');
+ 
+ $ilemails=$mails->count();
+$this->set('ilemails', $ilemails);
+
+ $this->paginate = [
+        'limit' => 20,
+        'order' => [
+            'Mails.mail_id' => 'desc'
+        ]
+    ];
+ 	if (count($mails)>0) { 	$k=$mails->all()->toArray();
+ 		if ($_GET['mails']) { $mails->limit($_GET['mails']); }
+      if ($_GET['elements']=='all') { $_SESSION['limit']=''; } else if ($_GET['elements']) { $_SESSION['limit']=$_GET['elements']; };
+		if ($_SESSION['limit']) { 
+			$this->paginate = [
+        'limit' => 20,
+        'order' => [
+            'Mails.mail_id' => 'desc'
+        ]
+    ];
+    $this->set('limit', $_SESSION['limit']);
+		}
+ 		  $this->set('mails', $this->paginate($mails));
+ 		   }
+ if ($id>0) { 
+	$wpis=$this->Mails->findById($id)->first()->toArray();
+	$this->set('wpis', $wpis);
+}
+$lastMail=$this->Mails->find()->order('Mails.mail_id desc')->first();
+if (count($lastMail)>0) { 
+$lastMail->toArray();
+
+
+}
+
  }
  }
 
