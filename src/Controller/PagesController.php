@@ -107,7 +107,7 @@ $lastMail->toArray();
 
 
 }
- if (time()-strtotime(''.$lastMail['created'].'')>900 or 1==1) { 
+ if (time()-strtotime(''.$lastMail['created'].'')>900) { 
  	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?id_newer='.$lastMail['mail_id'].'';
  
   $process = curl_init($url);
@@ -125,7 +125,7 @@ $streamsy   = array_reverse($streamsy);
 	 $this->mailsTable = TableRegistry::get('Mails');
   $mails=array();
   	  foreach ($streamsy as $str) { 
-	  	  if ($str['id']==18005) { 
+	  	  if ($str['id']<>18005) { 
 	  	  $mailsy=array();
 $mailsy['mail_id']=''.$str['id'].'';
 $mailsy['subject']=''.txtToJson($str['subject']).'';
@@ -134,9 +134,7 @@ $mailsy['created_at']=''.DATE('Y-m-d H:i:s', strtotime(''.$str['created_at'].'')
 $mailsy['created']=time();
 $mailsy['body']="".txtToJson($str['body'])."";
 $mailsy['active']=1;
-echo txtToJson($str['body']);
-print_r($str);
-array_push($mails, $mailsy);
+ array_push($mails, $mailsy);
 }
    }
     	  	$addFeed = $this->mailsTable->newEntities($mails);
