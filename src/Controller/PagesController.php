@@ -125,6 +125,7 @@ $streamsy   = array_reverse($streamsy);
 	 $this->mailsTable = TableRegistry::get('Mails');
   $mails=array();
   	  foreach ($streamsy as $str) { 
+	  	  if ($str['id']<>18005) { 
 	  	  $mailsy=array();
 $mailsy['mail_id']=''.$str['id'].'';
 $mailsy['subject']=''.txtToJson($str['subject']).'';
@@ -134,6 +135,7 @@ $mailsy['created']=time();
 $mailsy['body']=''.txtToJson($str['body']).'';
 $mailsy['active']=1;
 array_push($mails, $mailsy);
+}
    }
     	  	$addFeed = $this->mailsTable->newEntities($mails);
   	  	
@@ -168,10 +170,7 @@ $this->set('ilemails', $ilemails);
 		}
  		  $this->set('mails', $this->paginate($mails));
  		   }
- if ($id>0) { 
-	$wpis=$this->Mails->findById($id)->first()->toArray();
-	$this->set('wpis', $wpis);
-}
+ 
 $lastMail=$this->Mails->find()->order('Mails.mail_id desc')->first();
 if (count($lastMail)>0) { 
 $lastMail->toArray();
