@@ -73,7 +73,7 @@ else {
 }
 */
  $mails=$this->Mails->find()->where(''.$where.'')->order(''.$order.'');
- print_r($mails);
+ 
  $ilemails=$mails->count();
 $this->set('ilemails', $ilemails);
 
@@ -110,7 +110,7 @@ $lastMail->toArray();
  if (time()-strtotime(''.$lastMail['created'].'')>900) { 
  	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?'.$_SERVER['SPEAKOUT_MAILS_ACTION'].'='.$lastMail['mail_id'].'';
  
-
+echo $url;
  $process = curl_init($url);
  curl_setopt($process, CURLOPT_USERPWD, "".$_SERVER['SPEAKOUT_USERNAME'].":".$_SERVER['SPEAKOUT_PASSWORD']."");
 curl_setopt($process, CURLOPT_TIMEOUT, 30);
@@ -122,6 +122,7 @@ $return = curl_exec($process);
 curl_close($process);
 $streamsy=json_decode($return, true);
 $streamsy   = array_reverse($streamsy);
+print_r($streamsy);
  if (count($streamsy)>0) {  
 	 $this->mailsTable = TableRegistry::get('Mails');
   $mails=array();
