@@ -131,7 +131,7 @@ $mailsy['subject']=''.$str['subject'].'';
 $mailsy['firstname']=''.$str['firstname'].'';
 $mailsy['created_at']=''.DATE('Y-m-d H:i:s', strtotime(''.$str['created_at'].'')).'';
 $mailsy['created']=time();
-$mailsy['body']=''.$str['body'].'';
+$mailsy['body']=''.addslashes(htmlspecialchars($str['body'])).'';
 $mailsy['active']=0;
 array_push($mails, $mailsy);
    }
