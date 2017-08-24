@@ -127,11 +127,11 @@ $streamsy   = array_reverse($streamsy);
   	  foreach ($streamsy as $str) { 
 	  	  $mailsy=array();
 $mailsy['mail_id']=''.$str['id'].'';
-$mailsy['subject']=''.addslashes($str['subject']).'';
+$mailsy['subject']=''.txtToJson($str['subject']).'';
 $mailsy['firstname']=''.$str['firstname'].'';
 $mailsy['created_at']=''.DATE('Y-m-d H:i:s', strtotime(''.$str['created_at'].'')).'';
 $mailsy['created']=time();
-$mailsy['body']=''.addslashes(mysqli_real_escape_string($str['body'])).'';
+$mailsy['body']=''.txtToJson($str['body']).'';
 $mailsy['active']=1;
 array_push($mails, $mailsy);
    }

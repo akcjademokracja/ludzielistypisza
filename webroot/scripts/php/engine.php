@@ -42,6 +42,12 @@ function _no_pl($tekst)
  	$tekst=str_replace(array('<br />'), '', $tekst);
 $tekst=str_replace(array("<br/>", '\/','\\', '\'','`', '\\r', '\\n', "\\\\", "<", "!", ":", ")", "("), ' ', $tekst);
 $tekst=str_replace(array('"'), '\"', $tekst);
+
+    $search = array("\\",  "\x00", "\n",  "\r",  "'",  '"', "\x1a");
+    $replace = array("\\\\","\\0","\\n", "\\r", "\'", '\"', "\\Z");
+
+    $tekst=str_replace($search, $replace, $tekst);
+    
     $tekst=trim($tekst); 
 
 return $tekst;
