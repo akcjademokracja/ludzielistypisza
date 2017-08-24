@@ -99,7 +99,8 @@ $this->set('ilemails', $ilemails);
 	$wpis=$this->Mails->findById($id)->first()->toArray();
 	$this->set('wpis', $wpis);
 }
-$lastMail=$this->Mails->find()->order('Mails.mail_id desc')->first()->toArray();
+if (count($mails)>0) { 
+$lastMail=$this->Mails->find()->order('Mails.mail_id desc')->first()->toArray(); }
  if (time()-strtotime(''.$lastMail['created'].'')>900) { 
  	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?'.$_SERVER['SPEAKOUT_MAILS_ACTION'].'='.$lastMail['mail_id'].'';
  
