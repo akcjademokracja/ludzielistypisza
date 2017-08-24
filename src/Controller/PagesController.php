@@ -73,6 +73,7 @@ else {
 }
 */
  $mails=$this->Mails->find()->where(''.$where.'')->order(''.$order.'');
+ print_r($mails);
  $ilemails=$mails->count();
 $this->set('ilemails', $ilemails);
 
