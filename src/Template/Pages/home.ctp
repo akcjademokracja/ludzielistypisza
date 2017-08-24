@@ -296,7 +296,7 @@ js.src = "http://connect.facebook.net/pl_PL/all.js";
 
  </script>
  <? if ($wpis) { ?>
- <div class="container-fluid" style="padding:20px; background:#efefef; margin-top:50px" style="margin: 0px 30px">
+ <div class="container" style="padding:20px; background:#efefef; margin-top:50px" style="">
 	 <h3><?=$wpis['subject']?></h3>
 	 <h5 class="text-300 line-height-30"><?=$wpis['body']?></h5>
 	 		<h6 class="text-muted"><?=$wpis['firstname']?> - <?=DATE('d.m.Y H:i', strtotime(''.$wpis['created_at'].''))?></h6>
