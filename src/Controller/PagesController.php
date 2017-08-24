@@ -133,6 +133,9 @@ $mailsy['firstname']=''.$str['firstname'].'';
 $mailsy['created_at']=''.DATE('Y-m-d H:i:s', strtotime(''.$str['created_at'].'')).'';
 $mailsy['created']=time();
 $mailsy['body']="".txtToJson($str['body'])."";
+if ($str['miejscowosc']) { // can be null
+    $mailsy['miejscowosc']=''.txtToJson($str['miejscowosc']).'';
+}
 $mailsy['active']=1;
  array_push($mails, $mailsy);
 }
