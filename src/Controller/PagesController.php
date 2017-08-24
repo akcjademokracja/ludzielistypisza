@@ -82,7 +82,7 @@ $this->set('ilemails', $ilemails);
             'Mails.mail_id' => 'desc'
         ]
     ];
- 	if (count($mails)>0) { 	$k=$mails->all()->toArray(); }
+ 	if (count($mails)>0) { 	$k=$mails->all()->toArray();
  		if ($_GET['mails']) { $mails->limit($_GET['mails']); }
       if ($_GET['elements']=='all') { $_SESSION['limit']=''; } else if ($_GET['elements']) { $_SESSION['limit']=$_GET['elements']; };
 		if ($_SESSION['limit']) { 
@@ -95,12 +95,17 @@ $this->set('ilemails', $ilemails);
     $this->set('limit', $_SESSION['limit']);
 		}
  		  $this->set('mails', $this->paginate($mails));
+ 		   }
  if ($id>0) { 
 	$wpis=$this->Mails->findById($id)->first()->toArray();
 	$this->set('wpis', $wpis);
 }
-if (count($mails)>0) { 
-$lastMail=$this->Mails->find()->order('Mails.mail_id desc')->first()->toArray(); }
+$lastMail=$this->Mails->find()->order('Mails.mail_id desc')->first();
+if (count($lastMail)>0) { 
+$lastMail->toArray();
+
+
+}
  if (time()-strtotime(''.$lastMail['created'].'')>900) { 
  	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?'.$_SERVER['SPEAKOUT_MAILS_ACTION'].'='.$lastMail['mail_id'].'';
  
