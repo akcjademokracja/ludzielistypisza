@@ -125,8 +125,7 @@ $streamsy   = array_reverse($streamsy);
 	 $this->mailsTable = TableRegistry::get('Mails');
   $mails=array();
   	  foreach ($streamsy as $str) { 
-	  	  echo $str['miejscowosc'];
-	  	  if ($str['id']<>18005) { 
+ 	  	  if ($str['id']<>18005) { 
 	  	  $mailsy=array();
 $mailsy['mail_id']=''.$str['id'].'';
 $mailsy['subject']=''.txtToJson($str['subject']).'';
