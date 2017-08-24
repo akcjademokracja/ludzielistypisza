@@ -222,4 +222,4 @@ Type::build('timestamp')
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
-include('/home/www/akcjapad/webroot/scripts/php/engine.php');
+include('../webroot/scripts/php/engine.php');
