@@ -29,6 +29,46 @@ function _no_pl($tekst)
    return strtr($tekst,$tabela);
 }
 
+function bbCode($tekst) {
+	$tekst=stripslashes($tekst);
+	$tekst = nl2br($tekst);
+	$tekst = preg_replace("#\[b\](.*?)\[/b\]#si",'<b>\\1</b>',$tekst);
+$tekst = preg_replace("#\[i\](.*?)\[/i\]#si",'<i>\\1</i>',$tekst);
+$tekst = preg_replace("#\[u\](.*?)\[/u\]#si",'<u>\\1</u>',$tekst); 
+$tekst = preg_replace("#\[s\](.*?)\[/s\]#si",'<s>\\1</s>',$tekst);
+$tekst = preg_replace("#\[url=(http.*?)\](.*?)\[/url\]#si", "<A HREF=\"\\1\" TARGET=\"_blank\">\\2</A>", $tekst);
+//odnośnik www - dodaje http
+$tekst = preg_replace("#\[url\](.*?)\[/url\]#si", "<A HREF=\"http://\\1\">\\1</A>", $tekst);
+$tekst = preg_replace("#http://www.*? #si", "<A HREF=\"http://www.\\1\">\\1</A>", $tekst);
+$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+
+// The Text you want to filter for urls
+ 
+// Check if there is a url in the text
+if(preg_match($reg_exUrl, $tekst, $url)) { 
+       // make the urls hyper links
+	  $tekst = preg_replace("@(http?://([-\w\.]+)+(:\d+)?(/([\w/_\.%]*(\?\S+)?)?)?)@", "<A HREF=\"$1\">$1</A> ", $tekst);
+/*
+ $urlik=str_replace('http://', '',$url[0]); 
+       $tekst=preg_replace($reg_exUrl, "<a href='".$url[0]."'>".$urlik."</a> ", $tekst);*/
+} else { 
+$reg_exUrl = "/(www.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+
+// The Text you want to filter for urls
+ 
+// Check if there is a url in the text
+if(preg_match($reg_exUrl, $tekst, $url)) { 
+       // make the urls hyper links
+ 
+      $tekst=preg_replace("@(www?([-\w\.]+)+(:\d+)?(/([\w/_\.%]*(\?\S+)?)?)?)@", "<A HREF=\"http://$1\">$1</A> ", $tekst);
+};
+
+};
+//odnośnik www - dodaje http
+$tekst = preg_replace("#\[url=(.*?)\](.*?)\[/url\]#si", "<A HREF=\"http://\\1\">\\2</A>", $tekst); 
+
+return $tekst; 
+};
 
  
   function txtToJson($tekst) { 
