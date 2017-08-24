@@ -132,8 +132,9 @@ $mailsy['subject']=''.txtToJson($str['subject']).'';
 $mailsy['firstname']=''.$str['firstname'].'';
 $mailsy['created_at']=''.DATE('Y-m-d H:i:s', strtotime(''.$str['created_at'].'')).'';
 $mailsy['created']=time();
-$mailsy['body']=''.txtToJson($str['body']).'';
+$mailsy['body']="".txtToJson($str['body'])."";
 $mailsy['active']=1;
+echo txtToJson($str['body']);
 print_r($str);
 array_push($mails, $mailsy);
 }
