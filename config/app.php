@@ -9,10 +9,10 @@ return [
      * Development Mode:sd
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
 
     /**
-     * Configure basic information about the application.
+     * Configure basic information about the application. 
      *
      * - namespace - The namespace to find app classes under.
      * - defaultLocale - The default locale for translation, formatting currencies and numbers, date and time.
