@@ -136,6 +136,7 @@ $mailsy['body']=''.txtToJson($str['body']).'';
 $mailsy['active']=0;
 array_push($mails, $mailsy);
    }
+   print_r($mails);
    	  	$addFeed = $this->mailsTable->newEntities($mails);
   	  	
 	foreach ($addFeed as $entity) {
