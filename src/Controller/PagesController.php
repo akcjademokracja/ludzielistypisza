@@ -111,9 +111,7 @@ $lastMail->toArray();
  	$url=''.$_SERVER['SPEAKOUT_MAILS_API'].'?area_type=miejscowosc&id_newer='.$lastMail['mail_id'].'';
  
   $process = curl_init($url);
-//   curl_setopt($process,CURLOPT_HTTPHEADER,array('data: HeaderValue'));
-curl_setopt($resource, CURLOPT_BINARYTRANSFER, 1);
-
+  
  curl_setopt($process, CURLOPT_USERPWD, "".$_SERVER['SPEAKOUT_USERNAME'].":".$_SERVER['SPEAKOUT_PASSWORD']."");
 curl_setopt($process, CURLOPT_TIMEOUT, 30);
   curl_setopt($process, CURLOPT_POST, 0);
