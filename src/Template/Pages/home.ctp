@@ -299,7 +299,7 @@ js.src = "http://connect.facebook.net/pl_PL/all.js";
  <div class="container" style="padding:20px; background:#efefef; margin-top:50px" style="">
 	 <h3><?=$wpis['subject']?></h3>
 	 <h5 class="text-300 line-height-30"><?=$wpis['body']?></h5>
-	 		<h6 class="text-muted"><?=$wpis['firstname']?> <? if ($wpis['miejscowosc']) { echo '- '.$wpis['miejscowosc'].''; }; ?> - <?=DATE('d.m.Y H:i', strtotime(''.$wpis['created_at'].''))?></h6>
+	 		<h6 class="text-muted"><?=$wpis['firstname']?> <? if ($wpis['miejscowosc']) { echo '- '.$wpis['miejscowosc'].''; }; ?> - <?=DATE('d.m.Y', strtotime(''.$wpis['created_at'].''))?></h6>
 <br/>
 	 <div class="fb-like" data-href="https://lancuchswiatla.pl/<?=$wpis['id']?>-<?=linkTitle($wpis['subject'])?>-<?=linkTitle($wpis['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 	 
@@ -319,7 +319,7 @@ js.src = "http://connect.facebook.net/pl_PL/all.js";
 	<div class="card" style="padding: 20px; position: relative"><? if ($user) { ?> <div class="accept-this <? if ($stream['active']==1) { echo 'bg-success active'; };  if ($stream['active']==0) { echo 'bg-info'; };  if ($stream['active']==2) { echo 'bg-danger'; }; ?>" data-id="<?=$stream['id']?>"><? if ($stream['active']==2) { echo '<span class="flaticon-cancel"></span>'; } else { ?><span class="flaticon-checked"></span><? }; ?></div><? }; ?>
 
 		<h4><?=$stream['subject']?></h4>
-		<h6 class="text-muted"><?=$stream['firstname']?> <? if ($stream['miejscowosc']) { echo '- '.$stream['miejscowosc'].''; }; ?> - <?=DATE('d.m.Y H:i', strtotime(''.$stream['created_at'].''))?></h6>
+		<h6 class="text-muted"><?=$stream['firstname']?> <? if ($stream['miejscowosc']) { echo '- '.$stream['miejscowosc'].''; }; ?> - <?=DATE('d.m.Y', strtotime(''.$stream['created_at'].''))?></h6>
 		<h5 class="text-300"><?=$stream['body']?></h5>
 		<div class="fb-like" data-href="https://lancuchswiatla.pl/<?=$stream['id']?>-<?=linkTitle($stream['subject'])?>-<?=linkTitle($stream['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 		
