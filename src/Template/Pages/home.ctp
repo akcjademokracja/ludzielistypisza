@@ -41,8 +41,11 @@ $('.grid').masonry({
          url('../font/FFDINWebProCondBold.ttf')  format('truetype'), /* Safari, Android, iOS */
  }
  body {
-	 background: repeating-linear-gradient(-45deg, #ffe100 0px, #ffe100 200px, #009b37 200px, #009b37 400px, #f00600 400px, #f00600 600px, #0049aa 600px, #0049aa 800px, #ffe100 800px );
+	 /* background: repeating-linear-gradient(-45deg, #ffe100 0px, #ffe100 200px, #009b37 200px, #009b37 400px, #f00600 400px, #f00600 600px, #0049aa 600px, #0049aa 800px, #ffe100 800px ); */
+   background: url("/img/lancuchswiatla2.jpg");
 	 background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: 100% auto;
 	 padding-top:50px;
 	 width: 100%;
  	 font-family: 'din';}
