@@ -155,10 +155,10 @@ return [
      *   breathing room to complete logging or error handling.
      */
     'Error' => [
-        'errorLevel' => -1,
+        'errorLevel' => 'E_ALL',
         'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
         'skipLog' => [],
-        'log' => false,
+        'log' => true,
         'trace' => false,
     ],
 
@@ -290,6 +290,24 @@ return [
     /**
      * Configures logging options
      */
+         'Log' => [
+        'debug' => [
+            'className' => 'Cake\Log\Engine\FileLog',
+            'path' => LOGS,
+            'file' => 'debug',
+            'levels' => ['notice', 'info', 'debug'],
+            'url' => env('LOG_DEBUG_URL', null),
+        ],
+        'error' => [
+            'className' => 'Cake\Log\Engine\FileLog',
+            'path' => LOGS,
+            'file' => 'error',
+            'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+            'url' => env('LOG_ERROR_URL', null),
+        ],
+    ],
+/*
+    
     'Log' => [
         'debug' => [
             'className' => 'Cake\Log\Engine\FileLog',
@@ -306,6 +324,7 @@ return [
             'url' => env('LOG_ERROR_URL', null),
         ],
     ],
+*/
 
     /**
      * Session configuration.
