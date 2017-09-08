@@ -45,7 +45,8 @@ $('.grid').masonry({
    background: url("/img/lancuchswiatla2.jpg");
 	 background-attachment: fixed;
    background-repeat: no-repeat;
-   background-size: 100% auto;
+   background-size: cover;
+   background-position: center;
 	 padding-top:50px;
 	 width: 100%;
  	 font-family: 'din';}
