@@ -9,8 +9,12 @@ return [
      * Development Mode:sd
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
+     if ($_SERVER['REMOTE_ADDR']=='193.238.191.251') { 
+	         'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
 
+     } else { 
+    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
+}
     /**
      * Configure basic information about the application. 
      *
