@@ -9,12 +9,9 @@ return [
      * Development Mode:sd
      * true: Errors and warnings shown.
      */
-     if ($_SERVER['REMOTE_ADDR']=='193.238.191.251') { 
-	         'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
-
-     } else { 
+     
     'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
-};
+
     /**
      * Configure basic information about the application. 
      *
@@ -159,10 +156,10 @@ return [
      *   breathing room to complete logging or error handling.
      */
     'Error' => [
-        'errorLevel' => E_ALL,
+        'errorLevel' => -1,
         'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
         'skipLog' => [],
-        'log' => true,
+        'log' => false,
         'trace' => false,
     ],
 
@@ -299,18 +296,17 @@ return [
             'className' => 'Cake\Log\Engine\FileLog',
             'path' => LOGS,
             'file' => 'debug',
-            'levels' => ['notice', 'info', 'debug'],
+            'levels' => -1,
             'url' => env('LOG_DEBUG_URL', null),
         ],
         'error' => [
             'className' => 'Cake\Log\Engine\FileLog',
             'path' => LOGS,
             'file' => 'error',
-            'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+            'levels' => -1,
             'url' => env('LOG_ERROR_URL', null),
         ],
     ],
-
 
     /**
      * Session configuration.
