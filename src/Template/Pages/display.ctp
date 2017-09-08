@@ -250,7 +250,7 @@ js.src = "http://connect.facebook.net/en_US/all.js";
  <div class="container" style="padding:20px; background:#efefef; margin-top:50px">
 	 <h3><?=$wpis['subject']?></h3>
 	 <h5 class="text-300 line-height-30"><?=$wpis['body']?></h5>
-	 		<h6 class="text-muted"><?=$wpis['firstname']?> - <?=DATE('d.m.Y H:i', strtotime(''.$wpis['created_at'].''))?></h6>
+	 		<h6 class="text-muted"><?=$wpis['firstname']?> - <?=DATE('d.m.Y', strtotime(''.$wpis['created_at'].''))?></h6>
 <br/>
 	 <div class="fb-like" data-href="http://akcjapad.nowosz.com/<?=$wpis['id']?>-<?=linkTitle($wpis['subject'])?>-<?=linkTitle($wpis['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 	 
@@ -270,7 +270,7 @@ js.src = "http://connect.facebook.net/en_US/all.js";
 <div class="col-lg-<?=$lg?> col-md-6 col-12 grid-item" style="display:block; padding:15px;">
 	<div class="card" style="padding: 20px;">
 		<h4><?=$stream['subject']?></h4>
-		<h6 class="text-muted"><?=$stream['firstname']?> - <?=DATE('d.m.Y H:i', strtotime(''.$stream['created_at'].''))?></h6>
+		<h6 class="text-muted"><?=$stream['firstname']?> - <?=DATE('d.m.Y', strtotime(''.$stream['created_at'].''))?></h6>
 		<h5 class="text-300"><?=$stream['body']?></h5>
 		<div class="fb-like" data-href="http://akcjapad.nowosz.com/<?=$stream['id']?>-<?=linkTitle($stream['subject'])?>-<?=linkTitle($stream['created_at'])?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 		
