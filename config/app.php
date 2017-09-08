@@ -1,4 +1,9 @@
 <?php
+	if ($_SERVER['REMOTE_ADDR']=='193.238.191.251') { 
+		$erl=true;
+	} else { 
+		$erl=false;
+	}
 return [
     /**
      * Debug Level:
@@ -9,7 +14,7 @@ return [
      * Development Mode:sd
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', $erl), FILTER_VALIDATE_BOOLEAN),
 
     /**
      * Configure basic information about the application. 
