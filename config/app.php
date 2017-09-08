@@ -159,10 +159,10 @@ return [
      *   breathing room to complete logging or error handling.
      */
     'Error' => [
-        'errorLevel' => 2,
+        'errorLevel' => -1,
         'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
         'skipLog' => [],
-        'log' => true,
+        'log' => false,
         'trace' => false,
     ],
 
