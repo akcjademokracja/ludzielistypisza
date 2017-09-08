@@ -1,9 +1,4 @@
 <?php
-	if ($_SERVER['REMOTE_ADDR']=='193.238.191.251') { 
-		$erl=true;
-	} else { 
-		$erl=false;
-	}
 return [
     /**
      * Debug Level:
@@ -14,7 +9,7 @@ return [
      * Development Mode:sd
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', $erl), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
 
     /**
      * Configure basic information about the application. 
@@ -160,10 +155,10 @@ return [
      *   breathing room to complete logging or error handling.
      */
     'Error' => [
-        'errorLevel' => 'E_ALL',
+        'errorLevel' => -1,
         'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
         'skipLog' => [],
-        'log' => true,
+        'log' => false,
         'trace' => false,
     ],
 
@@ -295,24 +290,6 @@ return [
     /**
      * Configures logging options
      */
-         'Log' => [
-        'debug' => [
-            'className' => 'Cake\Log\Engine\FileLog',
-            'path' => LOGS,
-            'file' => 'debug',
-            'levels' => ['notice', 'info', 'debug'],
-            'url' => env('LOG_DEBUG_URL', null),
-        ],
-        'error' => [
-            'className' => 'Cake\Log\Engine\FileLog',
-            'path' => LOGS,
-            'file' => 'error',
-            'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
-            'url' => env('LOG_ERROR_URL', null),
-        ],
-    ],
-/*
-    
     'Log' => [
         'debug' => [
             'className' => 'Cake\Log\Engine\FileLog',
@@ -329,7 +306,6 @@ return [
             'url' => env('LOG_ERROR_URL', null),
         ],
     ],
-*/
 
     /**
      * Session configuration.
