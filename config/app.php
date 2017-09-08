@@ -1,4 +1,8 @@
-<?php
+<?php	if ($_SERVER['REMOTE_ADDR']=='193.238.191.251') { 
+		$erl=true;
+	} else { 
+		$erl=false;
+	};
 return [
     /**
      * Debug Level:
