@@ -145,6 +145,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 	padding: .15rem 1rem .10rem 1rem;
 	font-size: 14px;
 	margin-bottom: 10px;
+	float: right;
  
 }
  .btn.btn-yellow { 
