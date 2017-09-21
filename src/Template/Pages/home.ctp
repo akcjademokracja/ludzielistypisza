@@ -230,9 +230,10 @@ padding: 15px; margin:0px 0px; background:#fff;
     </ul>
 -->
 <div class=" float-right my-1 ml-auto btntopwrap">
-	
+			<a class="btn btn-yellow btn-lg ml-1 hidden-md-up" href="https://www.facebook.com/events/1933759743506332 " >WSZYSTKIE ŚWIATŁA NA PREZYDENTA!</a>
+
 	<a class="btn btn-primary btn-lg" href="https://dzialaj.akcjademokracja.pl/campaigns/chce-ustaw-zgodnych-z-Konstytucja" >NAPISZ LIST DO PREZYDENTA</a>
-		<a class="btn btn-yellow btn-lg ml-1" href="https://www.facebook.com/events/1933759743506332 " >WSZYSTKIE ŚWIATŁA NA PREZYDENTA!</a>
+		<a class="btn btn-yellow btn-lg ml-1 hidden-sm-down" href="https://www.facebook.com/events/1933759743506332 " >WSZYSTKIE ŚWIATŁA NA PREZYDENTA!</a>
 </div>
   </div>
 
