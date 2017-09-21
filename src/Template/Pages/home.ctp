@@ -134,7 +134,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 }
 	.btntopwrap {
 		position: absolute;
-		top:30px;
+		top:5px;
 		right:10px;
 		text-align: right;
 	}
@@ -142,9 +142,9 @@ padding: 20px; margin:0px 30px; background:#fff;
 	border-radius: 0px;
 	color:#fff !important;
 	line-height: 20px;
-	padding: .35rem 1rem .20rem 1rem;
+	padding: .15rem 1rem .10rem 1rem;
 	font-size: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
  
 }
  .btn.btn-yellow { 
@@ -156,7 +156,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 	border-radius: 0px;
  	color:#000 !important;
 	line-height: 20px;
-	padding: .35rem 1rem .20rem 1rem;
+	padding: .15rem 1rem .10rem 1rem;
 	font-size: 15px;
 	
 	
