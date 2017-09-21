@@ -134,7 +134,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 }
 	.btntopwrap {
 		position: absolute;
-		top:10px;
+		top:8px;
 		right:10px;
 		max-width: 80%;
 		text-align: right;
@@ -152,7 +152,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 		 background: #FBE14C;
  		 border-radius: 0px;
 		 border-color:#e5c614;
-		 	margin-bottom: 10px;
+		 	margin-bottom: 13px;
 
 		 
 	border-radius: 0px;
