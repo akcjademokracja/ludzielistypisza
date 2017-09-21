@@ -134,6 +134,7 @@ h1.navbar-brand {
 		position: absolute;
 		top:30px;
 		right:10px;
+		text-align: right;
 	}
 	.btn.btn-primary {
 	border-radius: 0px;
@@ -141,8 +142,7 @@ h1.navbar-brand {
 	line-height: 20px;
 	padding: .35rem 1rem .20rem 1rem;
 	font-size: 15px;
-
-
+ 
 }
  .btn.btn-yellow { 
 		 background: #FBE14C;
