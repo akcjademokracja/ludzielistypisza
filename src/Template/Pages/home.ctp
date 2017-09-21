@@ -206,7 +206,16 @@ h1.navbar-brand {
  <style>
 	 .btn.btn-yellow { 
 		 background: #FBE14C;
+ 		 border-radius: 0px;
 		 border-color:#e5c614;
+		 
+		 
+	border-radius: 0px;
+ 	color:#000 !important;
+	line-height: 30px;
+	padding: .75rem 1.5rem .40rem 1.5rem;
+	
+	
 	 }
 	 </style>
 
