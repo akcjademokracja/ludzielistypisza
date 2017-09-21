@@ -129,7 +129,11 @@ h1.navbar-brand {
 .navbar {
 padding: 20px; margin:0px 30px; background:#fff;
 }
-
+	#navbarSupportedContent, .navbar-nav, .btntopwrap {
+	 	text-align: right !important;
+	 	margin: 0px !important;
+	 	float: right !important;
+ 	}
 @media (max-width:800px) { #logo {
 	height: 50px;
 }
