@@ -109,6 +109,20 @@ h1.navbar-brand {
 
 
 }
+ .btn.btn-yellow { 
+		 background: #FBE14C;
+ 		 border-radius: 0px;
+		 border-color:#e5c614;
+		 
+		 
+	border-radius: 0px;
+ 	color:#000 !important;
+	line-height: 30px;
+	padding: .75rem 1.5rem .40rem 1.5rem;
+	
+	
+	 }
+	 
 #logo {
 	 height: 70px;
 }
@@ -130,6 +144,21 @@ h1.navbar-brand {
 
 
 }
+ .btn.btn-yellow { 
+		 background: #FBE14C;
+ 		 border-radius: 0px;
+		 border-color:#e5c614;
+		 
+		 
+	border-radius: 0px;
+ 	color:#000 !important;
+	line-height: 20px;
+	padding: .35rem 1rem .20rem 1rem;
+	font-size: 15px;
+	
+	
+	 }
+
 	h1.navbar-brand {
 		font-size: 20px;
 	}
@@ -204,19 +233,7 @@ h1.navbar-brand {
 
 </nav>
  <style>
-	 .btn.btn-yellow { 
-		 background: #FBE14C;
- 		 border-radius: 0px;
-		 border-color:#e5c614;
-		 
-		 
-	border-radius: 0px;
- 	color:#000 !important;
-	line-height: 30px;
-	padding: .75rem 1.5rem .40rem 1.5rem;
 	
-	
-	 }
 	 </style>
 
 <div class="container hidden-xs-up" style="padding:20px; background:#fff; margin-top:75px">
