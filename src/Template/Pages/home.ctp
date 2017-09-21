@@ -129,10 +129,36 @@ h1.navbar-brand {
 .navbar {
 padding: 20px; margin:0px 30px; background:#fff;
 }
+
 @media (max-width:800px) { #logo {
 	height: 50px;
 }
-	.btntopwrap {
+
+.navbar {
+padding: 15px; margin:0px 0px; background:#fff;
+}
+	h1.navbar-brand {
+		font-size: 20px;
+	}
+	.navbar-toggler-right {
+		top:10px;right:10px !important;
+		
+	}
+	.float-right {
+		float: none !important;
+ 	}
+ 	#navbarSupportedContent, .navbar-nav, .btntopwrap {
+	 	text-align: right !important;
+	 	margin: 0px !important;
+	 	float: right !important;
+ 	}
+ 	#navbarSupportedContent {
+	 	padding-bottom: 0px;
+ 	}
+}
+
+ @media (max-width:600px) { 
+	 	.btntopwrap {
 		position: absolute;
 		top:8px;
 		right:10px;
@@ -163,30 +189,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 	
 	
 	 }
-.navbar {
-padding: 15px; margin:0px 0px; background:#fff;
-}
-	h1.navbar-brand {
-		font-size: 20px;
-	}
-	.navbar-toggler-right {
-		top:10px;right:10px !important;
-		
-	}
-	.float-right {
-		float: none !important;
- 	}
- 	#navbarSupportedContent, .navbar-nav, .btntopwrap {
-	 	text-align: right !important;
-	 	margin: 0px !important;
-	 	float: right !important;
- 	}
- 	#navbarSupportedContent {
-	 	padding-bottom: 0px;
- 	}
-}
-
- 
+ }
 
 </style>
 
