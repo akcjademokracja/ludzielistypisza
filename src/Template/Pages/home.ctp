@@ -144,7 +144,6 @@ padding: 20px; margin:0px 30px; background:#fff;
 	line-height: 20px;
 	padding: .15rem 1rem .10rem 1rem;
 	font-size: 14px;
-	margin-bottom: 10px;
 	float: right;
  
 }
@@ -152,7 +151,8 @@ padding: 20px; margin:0px 30px; background:#fff;
 		 background: #FBE14C;
  		 border-radius: 0px;
 		 border-color:#e5c614;
-		 
+		 	margin-bottom: 10px;
+
 		 
 	border-radius: 0px;
  	color:#000 !important;
