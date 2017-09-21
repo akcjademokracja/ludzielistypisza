@@ -143,7 +143,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 	color:#fff !important;
 	line-height: 20px;
 	padding: .15rem 1rem .10rem 1rem;
-	font-size: 15px;
+	font-size: 14px;
 	margin-bottom: 10px;
  
 }
@@ -157,7 +157,7 @@ padding: 20px; margin:0px 30px; background:#fff;
  	color:#000 !important;
 	line-height: 20px;
 	padding: .15rem 1rem .10rem 1rem;
-	font-size: 15px;
+	font-size: 14px;
 	
 	
 	 }
