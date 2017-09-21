@@ -126,7 +126,9 @@ h1.navbar-brand {
 #logo {
 	 height: 70px;
 }
-
+.navbar {
+padding: 20px; margin:0px 30px; background:#fff;
+}
 @media (max-width:800px) { #logo {
 	height: 50px;
 }
@@ -142,6 +144,7 @@ h1.navbar-brand {
 	line-height: 20px;
 	padding: .35rem 1rem .20rem 1rem;
 	font-size: 15px;
+	margin-bottom: 15px;
  
 }
  .btn.btn-yellow { 
@@ -158,7 +161,9 @@ h1.navbar-brand {
 	
 	
 	 }
-
+.navbar {
+padding: 15px; margin:0px 0px; background:#fff;
+}
 	h1.navbar-brand {
 		font-size: 20px;
 	}
@@ -170,9 +175,9 @@ h1.navbar-brand {
 		float: none !important;
  	}
  	#navbarSupportedContent, .navbar-nav, .btntopwrap {
-	 	text-align: center !important;
+	 	text-align: right !important;
 	 	margin: 0px !important;
-	 	float: none !important;
+	 	float: right !important;
  	}
  	#navbarSupportedContent {
 	 	padding-bottom: 0px;
@@ -183,7 +188,7 @@ h1.navbar-brand {
 
 </style>
 
-<nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded container-fluid" style="padding: 20px; margin:0px 30px; background:#fff;">
+<nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded container-fluid">
  
    <h1 class="navbar-brand mb-0"><a href="http://akcjademokracja.pl"><img src="https://dzialaj.akcjademokracja.pl/images/akcja/logo.svg" id="logo"></a></h1>
 <div class="switches hidden-xs-up">
