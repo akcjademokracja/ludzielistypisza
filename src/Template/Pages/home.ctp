@@ -136,6 +136,7 @@ padding: 20px; margin:0px 30px; background:#fff;
 		position: absolute;
 		top:10px;
 		right:10px;
+		max-width: 80%;
 		text-align: right;
 	}
 	.btn.btn-primary {
