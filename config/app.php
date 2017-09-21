@@ -1,4 +1,4 @@
-<?php	if ($_SERVER['REMOTE_ADDR']=='193.238.191.251') { 
+<?php	if ($_SERVER['REMOTE_ADDR']=='89.76.1.136') { 
 		$erl=true;
 	} else { 
 		$erl=false;
