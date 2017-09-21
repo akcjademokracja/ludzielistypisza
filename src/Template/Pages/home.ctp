@@ -150,17 +150,19 @@ padding: 15px; margin:0px 0px; background:#fff;
 	.float-right {
 		float: none !important;
  	}
- 	#navbarSupportedContent, .navbar-nav, .btntopwrap {
-	 	text-align: right !important;
-	 	margin: 0px !important;
-	 	float: right !important;
- 	}
+
  	#navbarSupportedContent {
 	 	padding-bottom: 0px;
  	}
 }
 
  @media (max-width:600px) { 
+	  	#navbarSupportedContent, .navbar-nav, .btntopwrap {
+	 	text-align: right !important;
+	 	margin: 0px !important;
+	 	float: right !important;
+ 	}
+
 	 	.btntopwrap {
 		position: absolute;
 		top:8px;
